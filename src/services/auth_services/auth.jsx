@@ -19,13 +19,12 @@ const AuthService = {
         }
     },
 
-    register: async (UserData) => {
+    register: (UserData) => {
         try{
-            const response = await axios.post("http://localhost:8080/register", UserData)
-                .then((res)=>{
+            return axios.post("http://localhost:8080/register", UserData)
+                .then((res) => {
                     return res.data
-                }).catch((err)=>console.log("error register ", err));
-            return response.data
+                }).catch((err) => console.log("error register ", err))
         }
         catch(e){
             console.log("register error ", e)
@@ -46,11 +45,10 @@ const AuthService = {
 
     isauth: async () => {
         try {
-            const response = await axios.get("http://localhost:8080/isauth")
+            return axios.get("http://localhost:8080/isauth")
                 .then((res)=>{
                     return res.data
                 }).catch((err) => console.log("error get isauth ", err))
-            return !!response
         }catch (e) {
             console.log("error get auth ", e)
         }
