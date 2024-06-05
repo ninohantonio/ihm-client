@@ -29,7 +29,7 @@ const Home = () => {
     const activeSectionStyle = "ml-16 border-b-2 border-green-400"
 
     return (
-        <>
+        <div>
             <div className="p-5 h-16 bg-gray-200 fixed w-full">
                 <span className={"text-green-700 mr-2 text-xl"}>
                     <FontAwesomeIcon icon={faLeaf}/>
@@ -61,17 +61,16 @@ const Home = () => {
                         className={"text-white"}>Sur</span></h1>
                     <h1 className={"text-white text-[40px] font-bold"}>La Firme de l'Elevage</h1>
                     <p className={"text-yellow-500 mt-6"}> "La bonne gestion est la cle de la reussite" </p>
-                    <div
-                        className={"bg-green-600 text-gray-200 hover:text-white hover:transition-colors mt-7 rounded-md py-2 pl-2 cursor-pointer"}
-                        onClick={()=>{navigate("/animal")}}
+                    <a
+                        href={"/animal"}
+                        className={"block bg-green-600 text-gray-200 hover:text-white hover:transition-colors mt-7 rounded-md py-2 pl-2 cursor-pointer"}
                     >
                         Entrer dans l'application <span><FontAwesomeIcon icon={faArrowRight}/></span>
-                    </div>
+                    </a>
                 </div>
             </div>
 
-            <a name={"introduction"}></a>
-            <div className={"flex flex-row items-center justify-center w-full h-[100vh] pt-20"}>
+            <div className={"flex flex-row items-center justify-center w-full h-[100vh] pt-20"} id={"introduction"}>
                 <div className={"py-10 px-16 inline-block h-[70%] basis-[33%] rounded-md left-side-bg2"}>
                     <div
                         className={"bg-green-600 h-20 mt-[80%] bottom-0 text-white hover:text-white hover:transition-colors rounded-md pt-4 text-center pl-2 cursor-pointer"}>
@@ -105,12 +104,12 @@ const Home = () => {
                             <p className={"text-sm"}>Assurer la <br/> rentabilite</p>
                         </div>
                     </div>
-                    <div
-                        className={"bg-green-600 text-gray-200 hover:text-white hover:transition-colors mt-8 rounded-md py-2 pl-2 cursor-pointer"}
-                        onClick={()=>{navigate("/animal")}}
+                    <a
+                        href={"/animal"}
+                        className={"block bg-green-600 text-gray-200 hover:text-white hover:transition-colors mt-8 rounded-md py-2 pl-2 cursor-pointer"}
                     >
                         Entrer dans l'application <span><FontAwesomeIcon icon={faArrowRight}/></span>
-                    </div>
+                    </a>
                 </div>
             </div>
 
@@ -137,8 +136,7 @@ const Home = () => {
 
             </div>
 
-            <a name={"service"} id={"service"}></a>
-            <div className={"w-full h-[100vh] pt-10 left-side-bg3"}>
+            <div className={"w-full h-[100vh] pt-10 left-side-bg3"} id={"service"}>
                 <p className={"text-white text-center text-sm"}>Nos Services</p>
                 <h1 className={"text-green-600 text-[27px] font-bold text-center text-shadow"}>Ce que Nous Offrons <span
                     className={"text-black"}>aux</span></h1>
@@ -204,12 +202,12 @@ const Home = () => {
                     </div>
 
                 </div>
-                <p
+                <a
+                    href={"/animal"}
                     className={"text-center inline-block ml-[43.5%] w-40 h-12 pt-3.5 mt-8 hover:transition-colors hover:bg-green-700 cursor-pointer rounded-full bg-green-600 text-white"}
-                    onClick={()=>{navigate("/animal")}}
                 >
                     Beneficier <FontAwesomeIcon
-                    icon={faSmile}/></p>
+                    icon={faSmile}/></a>
             </div>
 
             <div className={"flex flex-row items-center justify-around w-full h-[20vh] bg-white rounded-md"}>
@@ -235,8 +233,7 @@ const Home = () => {
 
             </div>
 
-            <div className={"flex flex-row items-center justify-center w-full h-[70vh] bg-black bg-gradient-to-r"}>
-                <a name={"footer"}></a>
+            <div className={"flex flex-row items-center justify-center w-full h-[70vh] bg-black bg-gradient-to-r"} id={"footer"}>
                 <div className={"h-[70%] px-16 inline-block"}>
                     <h1 className={"text-green-600 text-[34px] font-bold"}><span
                         className={"text-green-600 mr-1"}><FontAwesomeIcon icon={faLeaf}/></span>FermeData </h1>
@@ -290,18 +287,16 @@ const Home = () => {
                         <li><a className={"text-gray-500 text-sm"} href={"#service"} onClick={()=>{setActive(3)}}>Nos Service</a></li>
                         <li><a className={"text-gray-500 text-sm"} href={"#footer"} onClick={()=>{setActive(4)}}>Nos Contacter</a></li>
                     </ul>
-                    <div
-                        className={"bg-green-600 text-gray-200 hover:text-white hover:transition-colors mt-7 rounded-md py-2 pl-2 cursor-pointer"}
-                        onClick={() => {
-                            navigate("/animal")
-                        }}
+                    <a
+                        className={"block bg-green-600 text-gray-200 hover:text-white hover:transition-colors mt-7 rounded-md py-2 pl-2 cursor-pointer"}
+                        href={"/animal"}
                     >
                         Entrer dans l'application <span><FontAwesomeIcon icon={faArrowRight}/></span>
-                    </div>
+                    </a>
                 </div>
             </div>
 
-        </>
+        </div>
     )
 }
 

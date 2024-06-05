@@ -4,7 +4,7 @@ import {
     faHome,
     faUser,
     faHeart,
-    faRepeat, faSignOutAlt, faSyringe, faBoxOpen, faLineChart, faCow, faCoins
+    faRepeat, faSignOutAlt, faSyringe, faBoxOpen, faLineChart, faCow, faCoins, faDollar
 } from '@fortawesome/free-solid-svg-icons';
 import AuthService from "../../services/auth_services/auth";
 import {useNavigate} from "react-router-dom";
@@ -43,14 +43,6 @@ const Sidebar = (props) => {
                         }}>
                         <FontAwesomeIcon icon={faHome} className="text-lg"/>
                         <span>Accueil</span>
-                    </li>
-                    <li className={props.active === 2 ? activeStyle : "flex items-center cursor-pointer space-x-2 border-gray-700 py-2"}
-                        onClick={() => {
-                            navigate("/profile")
-                            setActive(2)
-                        }}>
-                        <FontAwesomeIcon icon={faUser} className="text-lg"/>
-                        <span>Profil</span>
                     </li>
                     <li className={props.active === 3 ? activeStyle : "flex items-center space-x-2 cursor-pointer border-gray-700 py-2"}
                         onClick={() => {
@@ -94,6 +86,14 @@ const Sidebar = (props) => {
                         }}>
                         <FontAwesomeIcon icon={faCoins} className="text-lg"/>
                         <span>Vente</span>
+                    </li>
+                    <li className={props.active === 8 ? activeStyle : "flex items-center space-x-2 pl-2 border-gray-700 py-2 cursor-pointer"}
+                        onClick={() => {
+                            navigate("/caisse")
+                            setActive(8)
+                        }}>
+                        <FontAwesomeIcon icon={faDollar} className="text-lg"/>
+                        <span>Table de vente</span>
                     </li>
                     <li className="pt-8 border-2 mb-8"></li>
                     <li className="flex items-center space-x-2 cursor-pointer hover:text-red-700 border-gray-700 py-2 text-red-500"

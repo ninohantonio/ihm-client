@@ -33,7 +33,7 @@ const CategoryBar = () => {
     return (
         <>
             <MainNotificationContainer/>
-            <div className={"flex items-center fixed rounded center justify-center h-12 w-[60%] bg-gray-200 mx-auto ml-[20%] overflow-x-scroll"}>
+            <div className={"flex items-center fixed rounded center justify-center h-12 w-[60%] bg-gray-200 mx-auto ml-[20%]"}>
                 { AllCategory.length > 0 ?
                         AllCategory.map((item, index) => (
                             <div>
